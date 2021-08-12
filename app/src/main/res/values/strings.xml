@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Scientific Calculator</string>
+    <string name="normal">NORMAL</string>
+    <string name="scientific">SCIENTIFIC</string>
+    <string name="abs">abs</string>
+    <string name="log2">log<small><sub>2</sub></small></string>
+    <string name="log10">log<small><sub>10</sub></small></string>
+    <string name="ln">ln</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="sec">sec</string>
+    <string name="csc">csc</string>
+    <string name="cot">cot</string>
+    <string name="hyp">hyp</string>
+    <string name="pi">π</string>
+    <string name="x2">x<small><sup>2</sup></small></string>
+    <string name="x3">x<small><sup>3</sup></small></string>
+    <string name="x4">x<small><sup>4</sup></small></string>
+    <string name="xn">x<small><sup>n</sup></small></string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_4">4</string>
+    <string name="_6">6</string>
+    <string name="_5">5</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_3">3</string>
+    <string name="_0">0</string>
+    <string name="dot">.</string>
+    <string name="del"><small>DEL</small></string>
+    <string name="ac"><small>AC</small></string>
+    <string name="mul"><big>×</big></string>
+    <string name="divide"><big>÷</big></string>
+    <string name="plus"><big>+</big></string>
+    <string name="minus"><big>-</big></string>
+    <string name="signal"><big>±</big></string>
+    <string name="equal"><big>=</big></string>
+    <string name="sqrt"><big>√</big></string>
+    <string name="sqrt3"><big>∛</big></string>
+    <string name="sqrt4"><big>∜</big></string>
+    <string name="fact">n!</string>
+</resources>

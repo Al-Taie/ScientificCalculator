@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_weight="0.6"
+        android:background="@drawable/radius_shape"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/operation_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.5"
+            android:maxLength="50"
+            android:fontFamily="@font/roboto"
+            android:gravity="top"
+            android:paddingStart="16dp"
+            tools:text="1 + 7"
+            android:textAppearance="?attr/textAppearanceSearchResultTitle"
+            android:textColor="@color/white"
+            tools:ignore="NestedWeights" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/result_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLength="16"
+            android:fontFamily="@font/roboto"
+            android:gravity="bottom|right"
+            tools:text="8"
+            android:textAppearance="?attr/textAppearanceHeadline4"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/radio_scientific"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/scientific"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/radio_normal"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.75"
+            android:background="@android:color/transparent"
+            android:text="@string/normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/line_shape" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:id="@+id/scientific_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:columnCount="5"
+            android:rowCount="4">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_abs"
+                style="@style/ButtonStyle"
+                android:text="@string/abs"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_log2"
+                style="@style/ButtonStyle"
+                android:text="@string/log2"
+                android:onClick="onTriangleClick"
+                android:textSize="11.75sp"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_log10"
+                style="@style/ButtonStyle"
+                android:text="@string/log10"
+                android:textSize="11.75sp"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ln"
+                style="@style/ButtonStyle"
+                android:text="@string/ln"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sin"
+                style="@style/ButtonStyle"
+                android:text="@string/sin"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cos"
+                style="@style/ButtonStyle"
+                android:text="@string/cos"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tan"
+                style="@style/ButtonStyle"
+                android:text="@string/tan"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sec"
+                style="@style/ButtonStyle"
+                android:text="@string/sec"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_csc"
+                style="@style/ButtonStyle"
+                android:layout_width="65dp"
+                android:text="@string/csc"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cot"
+                style="@style/ButtonStyle"
+                android:text="@string/cot"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/ButtonStyle"
+                android:text="@string/hyp"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sqrt"
+                style="@style/ButtonStyle"
+                android:text="@string/sqrt"
+                android:onClick="onTriangleClick"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sqrt3"
+                style="@style/ButtonStyle"
+                android:text="@string/sqrt3"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sqrt4"
+                style="@style/ButtonStyle"
+                android:text="@string/sqrt4"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_pi"
+                style="@style/ButtonStyle"
+                android:text="@string/pi"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_x2"
+                style="@style/ButtonStyle"
+                android:gravity="center"
+                android:text="@string/x2"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_x3"
+                style="@style/ButtonStyle"
+                android:gravity="center"
+                android:text="@string/x3"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_x4"
+                style="@style/ButtonStyle"
+                android:gravity="center"
+                android:text="@string/x4"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_xn"
+                style="@style/ButtonStyle"
+                android:gravity="center"
+                android:text="@string/xn"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_fact"
+                style="@style/ButtonStyle"
+                android:gravity="center"
+                android:text="@string/fact"
+                app:cornerRadius="16dp" />
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:columnCount="3"
+                android:rowCount="4">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_7"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_7"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_8"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_8"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_9"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_9"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_4"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_4"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_5"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_5"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_6"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_6"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_1"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_1"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_2"
+                    style="@style/ButtonStyle"
+                    android:layout_width="65dp"
+                    android:text="@string/_2"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_3"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_3"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_0"
+                    style="@style/ButtonStyle"
+                    android:text="@string/_0"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_dot"
+                    style="@style/ButtonStyle"
+                    android:text="@string/dot"
+                    android:onClick="onNumClick"
+                    app:cornerRadius="16dp" />
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:columnCount="2"
+                android:rowCount="4">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_delete"
+                    style="@style/ButtonStyle"
+                    android:text="@string/del"
+                    android:onClick="onDeleteClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_clear"
+                    style="@style/ButtonStyle"
+                    android:text="@string/ac"
+                    android:onClick="onClearClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_mul"
+                    style="@style/ButtonStyle"
+                    android:text="@string/mul"
+                    android:onClick="onOperationClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_div"
+                    style="@style/ButtonStyle"
+                    android:text="@string/divide"
+                    android:onClick="onOperationClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_plus"
+                    style="@style/ButtonStyle"
+                    android:text="@string/plus"
+                    android:onClick="onOperationClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_minus"
+                    style="@style/ButtonStyle"
+                    android:layout_width="65dp"
+                    android:text="@string/minus"
+                    android:onClick="onOperationClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_signal"
+                    style="@style/ButtonStyle"
+                    android:text="@string/signal"
+                    android:onClick="onSignalClick"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_equal"
+                    style="@style/ButtonStyle"
+                    android:text="@string/equal"
+                    app:cornerRadius="16dp" />
+
+            </GridLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
